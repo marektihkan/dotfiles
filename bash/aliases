@@ -1,0 +1,7 @@
+
+
+alias reload="source ~/.bash_profile"
+alias rmate="mate app config db deploy experiments features lib spec vendor Gemfile Gemfile.lock Guardfile README.md"
+
+alias s="git status --short"
+alias git-log="git log --graph --oneline"
