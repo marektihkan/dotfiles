@@ -6,3 +6,5 @@ alias glog="git log --graph --oneline"
 
 alias ..="cd .."
 
+alias cls="clear"
+
