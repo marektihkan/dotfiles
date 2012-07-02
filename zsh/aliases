@@ -2,7 +2,7 @@ alias reload="source ~/.zshrc"
 alias rmate="mate app config db deploy experiments features lib spec vendor Gemfile Gemfile.lock Guardfile README.md"
 
 alias s="git status --short"
-alias glog="git log --graph --oneline"
+alias glog="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
 
 alias ..="cd .."
 
