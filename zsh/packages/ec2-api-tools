@@ -1,0 +1,2 @@
+export JAVA_HOME="/usr"
+export EC2_HOME="/usr/local/Library/LinkedKegs/ec2-api-tools/jars"
