@@ -1,8 +1,4 @@
 export PATH=/usr/local/bin:$PATH
 
-. ~/.dotfiles/zsh/packages/python
-. ~/.dotfiles/zsh/packages/virtualenv
 
 . ~/.dotfiles/zsh/packages/rbenv
-
-. ~/.dotfiles/zsh/packages/ec2-api-tools
