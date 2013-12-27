@@ -2,3 +2,4 @@ export PATH=/usr/local/bin:$PATH
 
 
 . ~/.dotfiles/zsh/packages/rbenv
+. ~/.dotfiles/zsh/packages/ssh
