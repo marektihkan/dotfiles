@@ -1,8 +1,10 @@
 alias reload="source ~/.zshrc"
 alias rmate="mate app config db deploy experiments features lib spec vendor Gemfile Gemfile.lock Guardfile README.md"
 
+# Git
 alias s="git status --short"
 alias glog="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
+alias gf="git fetch origin"
 
 # ls, the common ones I use a lot shortened for rapid fire usage
 alias ls='ls -G'      #I like color
