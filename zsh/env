@@ -1,5 +1,5 @@
 export PATH=/usr/local/bin:$PATH
-
+export PATH=$PATH:bin
 
 . ~/.dotfiles/zsh/packages/rbenv
 . ~/.dotfiles/zsh/packages/ssh
