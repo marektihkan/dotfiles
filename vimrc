@@ -18,6 +18,7 @@ Plugin 'tpope/vim-bundler'
 Plugin 'tpope/vim-repeat'
 Plugin 'vim-ruby/vim-ruby'
 Plugin 'kien/ctrlp.vim'
+Plugin 'scrooloose/nerdtree'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -33,5 +34,24 @@ set list
 set listchars=tab:▸\ ,eol:¬
 set backupdir=~/.tmp
 set directory=~/.tmp
+set hidden
+set spell
+set spelllang=en_us
 
 set laststatus=2
+
+" Enable file type detection
+filetype on
+
+" Syntax of these languages is fussy over tabs Vs spaces
+autocmd FileType ruby setlocal ts=2 sts=2 sw=2 expandtab
+autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
+autocmd FileType html setlocal ts=4 sts=4 sw=4 expandtab
+autocmd FileType css setlocal ts=4 sts=4 sw=4 expandtab
+autocmd FileType javascript setlocal ts=4 sts=4 sw=4 expandtab
+
+cnoremap %% <C-R>=fnameescape(expand('%:h')).'/'<cr>
+map <leader>ew :e %%
+map <leader>es :sp %%
+map <leader>ev :vsp %%
+
