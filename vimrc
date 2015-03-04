@@ -17,7 +17,6 @@ Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-bundler'
 Plugin 'tpope/vim-repeat'
 Plugin 'vim-ruby/vim-ruby'
-Plugin 'wincent/Command-T'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
