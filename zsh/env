@@ -1,7 +1,8 @@
-export PATH=$PATH:bin
+export PATH=bin:$PATH
 export PATH=/usr/local/bin:$PATH
 export EDITOR='vim'
 
+. ~/.dotfiles/zsh/packages/encoding
 . ~/.dotfiles/zsh/packages/rbenv
 . ~/.dotfiles/zsh/packages/ssh
 . ~/.dotfiles/zsh/packages/gvm
