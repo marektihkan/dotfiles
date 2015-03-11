@@ -38,6 +38,11 @@ set hidden
 set spell
 set spelllang=en_us
 
+set ts=4
+set sts=4
+set sw=4
+set expandtab
+
 set laststatus=2
 
 " Enable file type detection
