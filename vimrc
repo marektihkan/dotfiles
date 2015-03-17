@@ -63,8 +63,18 @@ autocmd FileType html setlocal ts=4 sts=4 sw=4 expandtab
 autocmd FileType css setlocal ts=4 sts=4 sw=4 expandtab
 autocmd FileType javascript setlocal ts=4 sts=4 sw=4 expandtab
 
+let mapleader = ","
+imap jj <Esc>
 cnoremap %% <C-R>=fnameescape(expand('%:h')).'/'<cr>
 map <leader>ew :e %%
 map <leader>es :sp %%
 map <leader>ev :vsp %%
+map <leader>h <C-w>h
+map <leader>j <C-w>j
+map <leader>k <C-w>k
+map <leader>l <C-w>l
+map <leader>tf <C-p>
+map <leader>tr <C-p><C-f>
+map <leader>tt <C-p><C-f><C-f>
+nnoremap <leader>a :Ag -i<space>
 
