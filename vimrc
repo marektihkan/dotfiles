@@ -63,7 +63,7 @@ autocmd FileType html setlocal ts=4 sts=4 sw=4 expandtab
 autocmd FileType css setlocal ts=4 sts=4 sw=4 expandtab
 autocmd FileType javascript setlocal ts=4 sts=4 sw=4 expandtab
 
-let mapleader = ","
+let mapleader = " "
 imap jj <Esc>
 cnoremap %% <C-R>=fnameescape(expand('%:h')).'/'<cr>
 map <leader>ew :e %%
