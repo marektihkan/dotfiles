@@ -46,6 +46,7 @@ set sw=4
 set expandtab
 
 set laststatus=2
+set clipboard=unnamed
 
 " CtrlP settings
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip
