@@ -65,18 +65,23 @@ autocmd FileType html setlocal ts=4 sts=4 sw=4 expandtab
 autocmd FileType css setlocal ts=4 sts=4 sw=4 expandtab
 autocmd FileType javascript setlocal ts=4 sts=4 sw=4 expandtab
 
-let mapleader = " "
+let mapleader = ","
 imap jj <Esc>
 cnoremap %% <C-R>=fnameescape(expand('%:h')).'/'<cr>
+
+" File opening
 map <leader>ew :e %%
 map <leader>es :sp %%
 map <leader>ev :vsp %%
-map <leader>h <C-w>h
-map <leader>j <C-w>j
-map <leader>k <C-w>k
-map <leader>l <C-w>l
-map <leader>tf <C-p>
-map <leader>tr <C-p><C-f>
-map <leader>tt <C-p><C-f><C-f>
+
+" Window movement
+map <C-h> <C-w>h
+map <C-j> <C-w>j
+map <C-k> <C-w>k
+map <C-l> <C-w>l
+
+" Search
 nnoremap <leader>a :Ag -i<space>
 
+" Project tree
+map <C-n> :NERDTreeToggle<CR>
