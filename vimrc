@@ -21,6 +21,8 @@ Plugin 'kien/ctrlp.vim'
 Plugin 'scrooloose/nerdtree'
 Plugin 'rking/ag.vim'
 Plugin 'christoomey/vim-tmux-navigator'
+Plugin 'Valloric/YouCompleteMe'
+Plugin 'sjl/gundo.vim'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -73,6 +75,11 @@ cnoremap %% <C-R>=fnameescape(expand('%:h')).'/'<cr>
 map <leader>ew :e %%
 map <leader>es :sp %%
 map <leader>ev :vsp %%
+
+" Git
+map <leader>ga :Gwrite
+map <leader>gs :Gstatus
+map <leader>gc :Gcommit
 
 " Window movement
 map <C-h> <C-w>h
