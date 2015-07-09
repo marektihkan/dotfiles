@@ -23,6 +23,7 @@ Plugin 'rking/ag.vim'
 Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'sjl/gundo.vim'
+Plugin 'rizzatti/dash.vim'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -77,9 +78,12 @@ map <leader>es :sp %%
 map <leader>ev :vsp %%
 
 " Git
-map <leader>ga :Gwrite
-map <leader>gs :Gstatus
-map <leader>gc :Gcommit
+map <leader>ga :Gwrite<CR>
+map <leader>gs :Gstatus<CR>
+map <leader>gc :Gcommit<CR>
+
+" Dash
+nmap <silent> <leader>d <Plug>DashSearch
 
 " Window movement
 map <C-h> <C-w>h
