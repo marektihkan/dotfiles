@@ -81,6 +81,7 @@ map <leader>ev :vsp %%
 map <leader>ga :Gwrite<CR>
 map <leader>gs :Gstatus<CR>
 map <leader>gc :Gcommit<CR>
+map <leader>gd :Gdiff<CR>
 
 " Dash
 nmap <silent> <leader>d <Plug>DashSearch
