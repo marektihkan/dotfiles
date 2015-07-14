@@ -26,6 +26,7 @@ Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'sjl/gundo.vim'
 Plugin 'rizzatti/dash.vim'
+Plugin 'Glench/Vim-Jinja2-Syntax'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
