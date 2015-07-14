@@ -98,3 +98,5 @@ nnoremap <leader>a :Ag -i<space>
 
 " Project tree
 map <C-n> :NERDTreeToggle<CR>
+" Closes Vim when only project tree is left open
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
