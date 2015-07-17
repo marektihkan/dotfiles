@@ -27,6 +27,7 @@ Plugin 'Valloric/YouCompleteMe'
 Plugin 'sjl/gundo.vim'
 Plugin 'rizzatti/dash.vim'
 Plugin 'Glench/Vim-Jinja2-Syntax'
+Plugin 'chase/vim-ansible-yaml'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
