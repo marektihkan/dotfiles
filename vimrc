@@ -18,6 +18,7 @@ Plugin 'tpope/vim-bundler'
 Plugin 'tpope/vim-repeat'
 Plugin 'tpope/vim-unimpaired'
 Plugin 'vim-ruby/vim-ruby'
+Plugin 'elixir-lang/vim-elixir'
 Plugin 'kien/ctrlp.vim'
 Plugin 'scrooloose/nerdtree'
 Plugin 'scrooloose/nerdcommenter'
@@ -68,9 +69,9 @@ filetype on
 " Syntax of these languages is fussy over tabs Vs spaces
 autocmd FileType ruby setlocal ts=2 sts=2 sw=2 expandtab
 autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
-autocmd FileType html setlocal ts=4 sts=4 sw=4 expandtab
+autocmd FileType html setlocal ts=2 sts=2 sw=2 expandtab
 autocmd FileType css setlocal ts=4 sts=4 sw=4 expandtab
-autocmd FileType javascript setlocal ts=4 sts=4 sw=4 expandtab
+autocmd FileType javascript setlocal ts=2 sts=2 sw=2 expandtab
 
 let mapleader = ","
 imap jj <Esc>
