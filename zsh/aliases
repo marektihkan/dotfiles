@@ -38,3 +38,6 @@ alias ff='find . -type f -name'
 alias ..="cd .."
 
 alias cls="clear"
+
+# Development tools
+alias yarn='docker run -v `pwd`:/home/node/app -w=/home/node/app --env NODE_ENV=development --entrypoint yarn -t node:8.1-alpine'
