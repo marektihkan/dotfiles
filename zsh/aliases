@@ -40,4 +40,19 @@ alias ..="cd .."
 alias cls="clear"
 
 # Development tools
-alias yarn='docker run -v `pwd`:/home/node/app -w=/home/node/app --env NODE_ENV=development --entrypoint yarn -t node:8.1-alpine'
+alias yarn='docker run -v `pwd`:/home/node/app -w=/home/node/app --env NODE_ENV=development --env NPM_TOKEN=$NPM_TOKEN --entrypoint yarn -t node:8.9-alpine'
+alias yarn87='docker run -v `pwd`:/home/node/app -w=/home/node/app --env NODE_ENV=development --entrypoint yarn -t node:8.7-alpine'
+alias yarn83='docker run -v `pwd`:/home/node/app -w=/home/node/app --env NODE_ENV=development --entrypoint yarn -t node:8.3-alpine'
+alias yarn6='docker run -v `pwd`:/home/node/app -w=/home/node/app --env NODE_ENV=development --entrypoint yarn -t node:6.11-alpine'
+
+alias dkbs='docker build -t "`basename $(pwd | xargs)`-v1" --build-arg NPM_TOKEN=$NPM_TOKEN .'
+alias dkbsd='docker build -t "`basename $(pwd | xargs)`-v1-dev" --build-arg NPM_TOKEN=$NPM_TOKEN -f development.df .'
+alias dkrdb='docker run -e MYSQL_ROOT_PASSWORD=root -e MYSQL_DATABASE=test --name=`basename $(pwd | sed -e "s/-service//g" | xargs)`-db -d -t mysql:5.6'
+alias dkrdbi='docker run -e MYSQL_ROOT_PASSWORD=root -e MYSQL_DATABASE=test -p 3307:3306 --name=`basename $(pwd | sed -e "s/-service//g" | xargs)`-db -d -t mysql:5.6'
+alias dkrdbm='docker run --link `basename $(pwd | sed -e "s/-service//g" | xargs)`-db:db --env-file .test.env -v $(pwd)/db:/home/node/app/db -it `basename $(pwd | xargs)`-v1-dev run db-migrate'
+alias dkrdbr='docker run --link `basename $(pwd | sed -e "s/-service//g" | xargs)`-db:db --env-file .test.env -v $(pwd)/db:/home/node/app/db -it `basename $(pwd | xargs)`-v1-dev run db-rollback'
+alias dkrit='docker run --link `basename $(pwd | sed -e "s/-service//g" | xargs)`-db:db --env-file .test.env -v $(pwd)/test:/home/node/app/test -v $(pwd)/lib:/home/node/app/lib -it `basename $(pwd | xargs)`-v1-dev run test'
+alias dkrut='docker run --env-file .test.env -v $(pwd)/test:/home/node/app/test -v $(pwd)/lib:/home/node/app/lib -it `basename $(pwd | xargs)`-v1-dev run test'
+alias dkrl='docker run --env-file .test.env -v $(pwd)/test:/home/node/app/test -v $(pwd)/lib:/home/node/app/lib -it `basename $(pwd | xargs)`-v1-dev run lint'
+
+alias t='testlio'
