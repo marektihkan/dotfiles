@@ -37,6 +37,7 @@ filetype plugin indent on    " required
 colorscheme molokai
 
 syntax on
+set relativenumber
 set number
 set history=500 " keep 500 lines of command line history
 set ruler " show the cursor position all the time
@@ -76,6 +77,10 @@ autocmd FileType css setlocal ts=4 sts=4 sw=4 expandtab
 let mapleader = ","
 imap jj <Esc>
 cnoremap %% <C-R>=fnameescape(expand('%:h')).'/'<cr>
+
+" Highlight
+map <leader>hf :nohlsearch<CR>
+map <leader>hh :set hlsearch<CR>*
 
 " File opening
 map <leader>ew :e %%
